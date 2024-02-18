@@ -326,3 +326,18 @@ button:hover {
   width: 344px;
   height: 62px;
 }
+
+.footer {
+  padding: 60px 0;
+}
+
+.footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right {
+  font-size: 16px;
+  line-height: 20px;
+}
