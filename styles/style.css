@@ -146,3 +146,42 @@ button:hover {
   top: -123px;
   left: calc(100% - 991px);
 }
+
+.why {
+  background-image: url(../images/whybg.png);
+  background-position: top center;
+  background-size: initial;
+  padding-bottom: 180px;
+}
+
+.why-title {
+  font-family: "Merriweather", sans-serif;
+  font-size: 64px;
+  text-align: center;
+  line-height: 80px;
+  letter-spacing: 1.92px;
+  text-transform: uppercase;
+}
+
+.why-items {
+  margin-top: 60px;
+  display: grid;
+  gap: 100px;
+  grid-template-columns: repeat(3, 312px);
+  justify-content: center;
+}
+
+.why-item {
+  text-align: center;
+}
+
+.why-item-title {
+  padding: 24px 0;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.why-item-text {
+  font-size: 16px;
+  line-height: 22px;
+}
