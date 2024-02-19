@@ -18,17 +18,17 @@
         <nav class="menu">
           <ul class="menu-list">
             <li class="menu-item">
-              <a href="#">Почему у нас</a>
+              <a data-link="why">Почему у нас</a>
             </li>
             <li class="menu-item">
-              <a href="#">Меню бургеров</a>
+              <a data-link="products">Меню бургеров</a>
             </li>
             <li class="menu-item">
-              <a href="#">Оформление заказа</a>
+              <a data-link="order">Оформление заказа</a>
             </li>
           </ul>
         </nav>
-        <div class="currency" title="изменить валюту">$</div>
+        <div class="currency" title="изменить валюту" id="change-currency">$</div>
       </div>
     </header>
 
@@ -40,14 +40,14 @@
           <p class="main-text">Мы обновили наше меню, спешите попробовать сезонные новинки и насладиться отличным вкусом
             наших бургеров. Готовим для вас лучшие бургеры в городе из отборной мраморной говядины.
           </p>
-          <div class="main-action"><button>Смотреть меню</button></div>
+          <div class="main-action"><button id="main-action-button">Смотреть меню</button></div>
         </div>
         <img src="./images/main_burger.png" alt="Большой бургер" class="main-image">
       </div>
     </section>
   </main>
 
-  <section class="why">
+  <section class="why" id="why">
     <div class="container">
       <h2 class="why-title common-title">почему нас выбирают?</h2>
       <div class="why-items">
@@ -76,7 +76,7 @@
     </div>
   </section>
 
-  <section class="products">
+  <section class="products" id="products">
     <div class="container">
       <h2 class="products-title common-title">выберите свой бургер</h2>
       <div class="products-items">
@@ -89,11 +89,11 @@
             салат айсбер, майонез, кетчуп, сырный соус</p>
           <div class="product-item-extra">
             <div class="product-item-info">
-              <div class="product-item-price">8 $</div>
+              <div class="product-item-price" data-base-prise="8">8 $</div>
               <div class="product-item-weight">360 гр</div>
             </div>
             <div class="product-item-action">
-              <button class="button product-button">
+              <button class="button product-button" data-burger="Бургер чеддер & бекон &#x1F354; ">
                 <span>Заказать</span>
                 <span>
                   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -115,11 +115,11 @@
             маринованный, лук маринованный, салат Ромен, бекон, соус BBQ</p>
           <div class="product-item-extra">
             <div class="product-item-info">
-              <div class="product-item-price">7 $</div>
+              <div class="product-item-price" data-base-prise="7">7 $</div>
               <div class="product-item-weight">390 гр</div>
             </div>
             <div class="product-item-action">
-              <button class="button product-button">
+              <button class="button product-button" data-burger="BBQ с беконом и курицей &#x1F354; ">
                 <span>Заказать</span>
                 <span>
                   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -142,11 +142,11 @@
             бекон, красный лук, соус бургер, горчица</p>
           <div class="product-item-extra">
             <div class="product-item-info">
-              <div class="product-item-price">10 $</div>
+              <div class="product-item-price" data-base-prise="10">10 $</div>
               <div class="product-item-weight">420 гр</div>
             </div>
             <div class="product-item-action">
-              <button class="button product-button">
+              <button class="button product-button" data-burger="Дабл биф бургер &#x1F354; ">
                 <span>Заказать</span>
                 <span>
                   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -168,11 +168,11 @@
             барбекю, соус сырный, салат айсберг</p>
           <div class="product-item-extra">
             <div class="product-item-info">
-              <div class="product-item-price">7 $</div>
+              <div class="product-item-price" data-base-prise="7">7 $</div>
               <div class="product-item-weight">220 гр</div>
             </div>
             <div class="product-item-action">
-              <button class="button product-button">
+              <button class="button product-button" data-burger="Баварский бургер &#x1F354;">
                 <span>Заказать</span>
                 <span>
                   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -195,11 +195,11 @@
             сырный соус, кетчуп, зелень</p>
           <div class="product-item-extra">
             <div class="product-item-info">
-              <div class="product-item-price">8 $</div>
+              <div class="product-item-price" data-base-prise="8">8 $</div>
               <div class="product-item-weight">220 гр</div>
             </div>
             <div class="product-item-action">
-              <button class="button product-button">
+              <button class="button product-button" data-burger="Бекон чизбургер &#x1F354; ">
                 <span>Заказать</span>
                 <span>
                   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -222,11 +222,11 @@
             лук, кетчуп, соус сырный, горчица, зелень</p>
           <div class="product-item-extra">
             <div class="product-item-info">
-              <div class="product-item-price">9 $</div>
+              <div class="product-item-price" data-base-prise="9">9 $</div>
               <div class="product-item-weight">320 гр</div>
             </div>
             <div class="product-item-action">
-              <button class="button product-button">
+              <button class="button product-button" data-burger="Индиана бургер &#x1F354; ">
                 <span>Заказать</span>
                 <span>
                   <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -248,11 +248,11 @@
             соус барбекю, соус сырный, салат айсберг</p>
           <div class="product-item-extra">
             <div class="product-item-info">
-              <div class="product-item-price">8 $</div>
+              <div class="product-item-price" data-base-prise="8">8 $</div>
               <div class="product-item-weight">280 гр</div>
             </div>
             <div class="product-item-action">
-              <button class="button product-button">
+              <button class="button product-button" data-burger="Вегги бургер &#x1F354; ">
                 <span>Заказать</span>
                 <span>
                   <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -274,11 +274,11 @@
             красный лук, сыр, перец халапеньо, кетчуп, зелень</p>
           <div class="product-item-extra">
             <div class="product-item-info">
-              <div class="product-item-price">7 $</div>
+              <div class="product-item-price" data-base-prise="7">7 $</div>
               <div class="product-item-weight">380 гр</div>
             </div>
             <div class="product-item-action">
-              <button class="button product-button">
+              <button class="button product-button" data-burger="Плаксивый Джо &#x1F354; ">
                 <span>Заказать</span>
                 <span>
                   <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -300,11 +300,11 @@
             маринованный, криспи лук, кетчуп, соус сырный, горчица, зелень</p>
           <div class="product-item-extra">
             <div class="product-item-info">
-              <div class="product-item-price">11 $</div>
+              <div class="product-item-price" data-base-prise="11">11 $</div>
               <div class="product-item-weight">400 гр</div>
             </div>
             <div class="product-item-action">
-              <button class="button product-button">
+              <button class="button product-button" data-burger="Двойной чизбургер &#x1F354; ">
                 <span>Заказать</span>
                 <span>
                   <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -326,11 +326,11 @@
             барбекю, соус сырный, салат айсберг, свежий томат</p>
           <div class="product-item-extra">
             <div class="product-item-info">
-              <div class="product-item-price">9 $</div>
+              <div class="product-item-price" data-base-prise="12">9 $</div>
               <div class="product-item-weight">300 гр</div>
             </div>
             <div class="product-item-action">
-              <button class="button product-button">
+              <button class="button product-button" data-burger="Фрешбургер &#x1F354; ">
                 <span>Заказать</span>
                 <span>
                   <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -352,11 +352,11 @@
             огурец маринованный, сыр, горчичный соус, кетчуп, зелень</p>
           <div class="product-item-extra">
             <div class="product-item-info">
-              <div class="product-item-price">8 $</div>
+              <div class="product-item-price" data-base-prise="8">8 $</div>
               <div class="product-item-weight">320 гр</div>
             </div>
             <div class="product-item-action">
-              <button class="button product-button">
+              <button class="button product-button" data-burger="Цуккини бургер &#x1F354; ">
                 <span>Заказать</span>
                 <span>
                   <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -378,11 +378,11 @@
             маринованный, томат, кетчуп, двойной сыр чеддар, горчица, зелень</p>
           <div class="product-item-extra">
             <div class="product-item-info">
-              <div class="product-item-price">9 $</div>
+              <div class="product-item-price" data-base-prise="9">9 $</div>
               <div class="product-item-weight">360 гр</div>
             </div>
             <div class="product-item-action">
-              <button class="button product-button">
+              <button class="button product-button" data-burger="Двойной бургер чеддар  &#x1F354; ">
                 <span>Заказать</span>
                 <span>
                   <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -399,33 +399,37 @@
     </div>
   </section>
 
-  <section class="order">
+  <section class="order" id="order">
     <div class="container">
       <h2 class="order-title common-title">
         оформление заказа
       </h2>
       <img src="./images/order_image.png" alt="Бургер в коробке" class="order-image">
-      <form class="order-form">
+      <form class="order-form" action="#">
         <p class="order-form-text">
           Заполните все данные и наш менеджер свяжется с вами для подтверждения заказа
         </p>
         <div class="order-form-inputs">
           <fieldset class="order-form-input">
             <label>
-              <input type="text" placeholder="Ваш заказ" aria-label="Ваш заказ">
+              <input type="text" placeholder="Ваш заказ" aria-label="Ваш заказ" id="burger">
+            </label>
+          </fieldset>
+          <div class="order-form-controls">
+            <div data-link="product" id="addOrder">Дополнить заказ</div>
+            <div id="cancelOrder">Отменить заказ</div>
+          </div>
+          <fieldset class="order-form-input">
+            <label>
+              <input type="text" placeholder="Ваше имя" aria-label="Ваше имя" id="customerName">
             </label>
           </fieldset>
           <fieldset class="order-form-input">
             <label>
-              <input type="text" placeholder="Ваше имя" aria-label="Ваше имя">
+              <input type="text" placeholder="Ваш телефон" aria-label="Ваш телефон" id="phone">
             </label>
           </fieldset>
-          <fieldset class="order-form-input">
-            <label>
-              <input type="text" placeholder="Ваш телефон" aria-label="Ваш телефон">
-            </label>
-          </fieldset>
-          <button class="button">Оформить заказ</button>
+          <button class="button" id="order-action">Оформить заказ</button>
         </div>
       </form>
     </div>
@@ -439,6 +443,8 @@
       <div class="rights">Все права защищены</div>
     </div>
   </footer>
+
+  <script src="./scripts/script.js"></script>
 </body>
 
 </html>
