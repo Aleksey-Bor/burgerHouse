@@ -25,6 +25,10 @@ body {
   margin: 0 auto;
 }
 
+h1, h2, h3, p {
+  margin: 0;
+}
+
 button {
   background: linear-gradient(135deg, #da8023 0%, #e2b438 100%);
   border-radius: 8px;
