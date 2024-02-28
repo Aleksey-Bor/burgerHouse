@@ -86,17 +86,17 @@ document.getElementById("change-currency").onclick = function (e) {
   let coefficient = 1;
 
   if (currentCurrency === "$") {
-    newCurrency = "₽";
-    coefficient = 93;
-  } else if (currentCurrency === "₽") {
     newCurrency = "BYN";
     coefficient = 3.3;
   } else if (currentCurrency === "BYN") {
     newCurrency = "€";
-    coefficient = 0.93;
+    coefficient = 0.92;
   } else if (currentCurrency === "€") {
     newCurrency = "¥";
     coefficient = 7.2;
+  } else if (currentCurrency === "¥") {
+    newCurrency = "₽";
+    coefficient = 93;
   }
 
   e.target.innerText = newCurrency;
@@ -108,4 +108,22 @@ document.getElementById("change-currency").onclick = function (e) {
       " " +
       newCurrency;
   });
+};
+
+//Анимация главной картинки и картинк в разделе заказ при движени мышкой экрану
+let mainImageStyle = document.getElementById("main-image").style;
+let orderImageStyle = document.getElementById("order-image").style;
+document.onmousemove = function (e) {
+  orderImageStyle.transform =
+    "translate(-" +
+    (e.clientX * 0.3) / 8 +
+    "px,-" +
+    (e.clientY * 0.3) / 8 +
+    "px)";
+  mainImageStyle.transform =
+    "translate(-" +
+    (e.clientX * 0.3) / 8 +
+    "px,-" +
+    (e.clientY * 0.3) / 8 +
+    "px)";
 };

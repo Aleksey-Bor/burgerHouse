@@ -217,8 +217,14 @@ button:hover {
   height: 250px;
 }
 
-.product-item-image {
+.product-item-image img {
   max-width: 100%;
+  transition: all 0.3s ease;
+}
+
+.product-item-image img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .product-item-title {
@@ -371,7 +377,6 @@ button:hover {
   line-height: 20px;
 }
 
-
 @media screen and (max-width: 1225px) {
   .main,
   .products,
@@ -492,4 +497,3 @@ button:hover {
     margin-top: 20px;
   }
 }
-
