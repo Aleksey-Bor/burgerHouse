@@ -51,32 +51,6 @@ document.getElementById("cancelOrder").onclick = function () {
   orderFormControlsElem.style.display = "none";
 };
 
-//Валидация форм. Проверяем только заполнена форма или нет.
-let burger = document.getElementById("burger");
-let customerName = document.getElementById("customerName");
-let phone = document.getElementById("phone");
-
-document.getElementById("order-action").onclick = function (event) {
-  event.preventDefault();
-  let hasError = false;
-
-  [burger, customerName, phone].forEach((item) => {
-    if (!item.value) {
-      item.parentElement.parentElement.style.background = "red";
-      hasError = true;
-    } else {
-      item.parentElement.parentElement.style.background = "";
-    }
-  });
-
-  if (!hasError) {
-    [burger, customerName, phone].forEach((item) => {
-      item.value = "";
-    });
-    alert("Спасибо за заказ! Мы скоро свяжемся с вами!");
-  }
-};
-
 //Меняем валюту в стоимости бургеров
 let prices = document.getElementsByClassName("product-item-price");
 prices = Array.from(prices);
@@ -127,3 +101,53 @@ document.onmousemove = function (e) {
     (e.clientY * 0.3) / 8 +
     "px)";
 };
+
+//отправляем запрос на сервер
+//Валидация форм. Проверяем только заполнена форма или нет.
+document
+  .getElementById("order-action")
+  .addEventListener("click", function (event) {
+    event.preventDefault(); // Предотвращаем стандартное поведение формы
+
+    let order = document.getElementById("burger");
+    let customerName = document.getElementById("customerName");
+    let phone = document.getElementById("phone");
+
+    let data = {
+      order: order.value,
+      name: customerName.value,
+      phone: phone.value,
+    };
+
+    let hasError = false;
+
+    [order, customerName, phone].forEach((item) => {
+      if (!item.value) {
+        item.parentElement.parentElement.style.background = "red";
+        hasError = true;
+      } else {
+        item.parentElement.parentElement.style.background = "";
+      }
+    });
+
+    if (!hasError) {
+      fetch("https://testologia.site/burgers-order", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          alert(data.message);
+        })
+        .catch((error) => {
+          alert(error.message);
+        });
+
+      [burger, customerName, phone].forEach((item) => {
+        item.value = "";
+      });
+    }
+  });
