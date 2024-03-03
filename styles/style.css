@@ -224,7 +224,7 @@ button:hover {
 
 .product-item-image img:hover {
   transform: scale(1.1);
-  cursor: pointer;
+  cursor: zoom-in;
 }
 
 .product-item-title {
