@@ -222,4 +222,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
     });
+
+  //Настраиваем лоадер
+  let loader = document.getElementById("loader");
+  loader.classList.add("showed");
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 3500);
 });
