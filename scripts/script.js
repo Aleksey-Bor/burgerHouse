@@ -223,10 +223,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-  //Настраиваем лоадер
+  // Настраиваем лоадер
   let loader = document.getElementById("loader");
   loader.classList.add("showed");
   setTimeout(() => {
-    loader.style.display = "none";
-  }, 3500);
+    loader.classList.add("hide");
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 500);
+  }, 3000);
 });
