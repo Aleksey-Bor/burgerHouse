@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let burgerInput = document.getElementById("burger");
 
   // Отправляем GET-запрос на сервер и загужаем данные о бургерах и  отображаем их на странице
-  fetch("https://testologia.site/burgers-data?extra=black")
+  fetch("https://florentine-unruly-galliform.glitch.me/burgers-data?extra=black")
     .then((response) => response.json())
     .then((data) => {
       // Получаем контейнер для продуктов
