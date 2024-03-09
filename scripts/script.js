@@ -202,7 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       if (!hasError) {
-        fetch("https://testologia.site/burgers-order", {
+        fetch("https://florentine-unruly-galliform.glitch.me/burgers-order", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
